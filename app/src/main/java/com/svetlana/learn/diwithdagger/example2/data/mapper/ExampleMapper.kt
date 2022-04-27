@@ -1,6 +1,8 @@
 package com.svetlana.learn.diwithdagger.example2.data.mapper
 
-class ExampleMapper {
+import javax.inject.Inject
+
+class ExampleMapper @Inject constructor() {
     fun map() {
 
     }
