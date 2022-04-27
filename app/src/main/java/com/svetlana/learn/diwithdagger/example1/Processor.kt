@@ -1,4 +1,6 @@
 package com.svetlana.learn.diwithdagger.example1
 
-class Processor {
+import javax.inject.Inject
+
+class Processor @Inject constructor() {
 }
