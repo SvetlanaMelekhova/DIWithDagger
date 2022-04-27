@@ -2,7 +2,7 @@ package com.svetlana.learn.diwithdagger.example1
 
 class Component {
 
-    fun getComputer(): Computer {
+    private fun getComputer(): Computer {
         val monitor = Monitor()
         val keyboard = Keyboard()
         val mouse = Mouse()
@@ -16,6 +16,7 @@ class Component {
     }
 
     fun inject(activity: Activity) {
-        activity.computer = getComputer()
+        //activity.computer = getComputer()
+        //activity.keyboard = Keyboard()
     }
 }

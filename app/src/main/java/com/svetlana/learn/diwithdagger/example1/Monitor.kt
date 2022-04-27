@@ -1,4 +1,6 @@
 package com.svetlana.learn.diwithdagger.example1
 
-class Monitor {
+import javax.inject.Inject
+
+class Monitor  {
 }
