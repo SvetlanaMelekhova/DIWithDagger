@@ -1,9 +1,6 @@
 package com.svetlana.learn.diwithdagger.example2.di
 
-import com.svetlana.learn.diwithdagger.example2.data.datasource.ExampleLocalDataSource
-import com.svetlana.learn.diwithdagger.example2.data.datasource.ExampleLocalDataSourceImpl
-import com.svetlana.learn.diwithdagger.example2.data.datasource.ExampleRemoteDataSource
-import com.svetlana.learn.diwithdagger.example2.data.datasource.ExampleRemoteDataSourceImpl
+import com.svetlana.learn.diwithdagger.example2.data.datasource.*
 import dagger.Binds
 import dagger.Module
 
@@ -16,5 +13,11 @@ interface DataModule {
 
     @Binds
     @ApplicationScope
+    @RemoteQualifier
     fun bindExampleRemoteDataSource(impl: ExampleRemoteDataSourceImpl): ExampleRemoteDataSource
+
+    @Binds
+    @ApplicationScope
+    @FakeQualifier
+    fun bindFakeRemoteDataSource(impl: FakeRemoteDataSourceImpl): ExampleRemoteDataSource
 }
