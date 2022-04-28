@@ -5,10 +5,11 @@ import android.util.Log
 import javax.inject.Inject
 
 class ExampleDatabase @Inject constructor(
-    private val context: Context
+    private val context: Context,
+    private val timeInMillis: Long
 ) {
     fun method() {
-        Log.d(LOG_TAG, "ExampleDatabase")
+        Log.d(LOG_TAG, "ExampleDatabase $timeInMillis")
     }
 
     companion object {

@@ -6,11 +6,12 @@ import com.svetlana.learn.diwithdagger.R
 import javax.inject.Inject
 
 class ExampleApiService @Inject constructor(
-    private val context: Context
+    private val context: Context,
+    private val timeInMillis: Long
 ) {
 
     fun method() {
-        Log.d(LOG_TAG, "ExampleApiService ${context.getString(R.string.app_name)}")
+        Log.d(LOG_TAG, "ExampleApiService ${context.getString(R.string.app_name)} $timeInMillis")
     }
 
     companion object{

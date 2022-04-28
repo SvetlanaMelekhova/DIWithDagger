@@ -3,7 +3,6 @@ package com.svetlana.learn.diwithdagger.example2.presentation
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.svetlana.learn.diwithdagger.R
-import com.svetlana.learn.diwithdagger.example2.di.ContextModule
 import com.svetlana.learn.diwithdagger.example2.di.DaggerAppComponent
 import javax.inject.Inject
 
@@ -14,7 +13,8 @@ class MainActivity : AppCompatActivity() {
 
     private val component by lazy {
         DaggerAppComponent.builder()
-            .contextModule(ContextModule(application))
+            .context(application)
+            .currentTime(System.currentTimeMillis())
             .build()
     }
 
