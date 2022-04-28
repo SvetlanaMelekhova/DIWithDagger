@@ -10,7 +10,7 @@ interface AppComponent {
 
     fun inject(activity: MainActivity)
 
-    @Component.Builder
+    /*@Component.Builder
     interface AppComponentBuilder {
 
         @BindsInstance
@@ -20,5 +20,14 @@ interface AppComponent {
         fun currentTime(time: Long): AppComponentBuilder
 
         fun build(): AppComponent
+    }*/
+
+    @Component.Factory
+    interface AppComponentFactory {
+
+        fun create(
+            @BindsInstance context: Context,
+            @BindsInstance time: Long
+        ): AppComponent
     }
 }
