@@ -2,6 +2,7 @@ package com.svetlana.learn.diwithdagger.example2.di
 
 import android.content.Context
 import com.svetlana.learn.diwithdagger.example2.presentation.MainActivity
+import com.svetlana.learn.diwithdagger.example2.presentation.MainActivity2
 import dagger.BindsInstance
 import dagger.Component
 import javax.inject.Singleton
@@ -10,7 +11,7 @@ import javax.inject.Singleton
 @Component(modules = [DataModule::class, DomainModule::class])
 interface AppComponent {
 
-    fun inject(activity: MainActivity)
+    fun activityComponentFactory(): ActivityComponent.ActivityComponentFactory
 
     /*@Component.Builder
     interface AppComponentBuilder {
